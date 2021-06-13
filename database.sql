@@ -1,0 +1,13 @@
+CREATE SCHEMA IF NOT EXISTS `kda` DEFAULT CHARACTER SET utf8 ;
+USE `kda` ;
+DROP TABLE IF EXISTS `kda`.`students` ;
+
+CREATE TABLE IF NOT EXISTS `kda`.`students` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(255) NOT NULL,
+  `last_name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NULL,
+  UNIQUE (`email`),
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
